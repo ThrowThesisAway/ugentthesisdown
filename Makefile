@@ -1,5 +1,5 @@
-IMAGE := $(shell grep PACKAGE_REPO Dockerfile | awk '{print $2}' | cut -d '=' -f 2)
-VERSION:= $(shell grep PACKAGE_VERSION Dockerfile | awk '{print $2}' | cut -d '=' -f 2)
+IMAGE := $(shell grep PACKAGE_REPO Dockerfile | awk '{print $$2}' | cut -d '=' -f 2)
+VERSION:= $(shell grep PACKAGE_VERSION Dockerfile | awk '{print $$2}' | cut -d '=' -f 2)
 
 test:
 	true
