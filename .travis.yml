@@ -27,3 +27,9 @@ deploy:
     script: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD && make push-image
     on:
       branch: master
+
+notifications:
+  slack:
+    secure: Un6W5gb9aP7oJbR9Aaw/Ig5HPxztGGl7Oz08fT6CjYbNNt6XtORq1nQqYc6KFSJ0XsGVuLYf2Ak6pJ150/hT4PwuYYxGkgZy660/9i1wkMblr5Ws6yucDbOMGGbr1KxZL4Z2sNSfSCCsJ7H8QnUlaq6oG3QDUmPd/taeEweZcC32Nipb1j8RzpcNvJsKM/kB8VAO4HhX66Y8RpXHtXyXeDUuII8YZjeS0aApsU4hpN9XWq8O1iWvCnxoPQj8cI3KKURvTk1JgH0UOZgSwObveJ4VvgqdoUyCWXgEqy7uNYX0rcpPIw0G70HSuFGCfUZ5gM7Z0JJ2ApUHanT7xdRn7nOT3TSzMkEqhxSB/F3dTtvzA/3OXVbuQur1N3M0hRylkK7Y02dIZ+WZgczAVORI4qVs+/G2kuG/AEUDl+eKzTPZSbYbz+jLRheBFcOR7YqeAAEGmQu/P6dE1w6yy575a/64mjjkCQcZkKuMDsoKUPMnOZYSA9dnj+4sf7+KeH/iq1n9ftKsVVVjWfVF83h9PXom+rnvifNh2U6SPhJsbwjMRTqXtAugrXSGFvdMv7rkW+Sr1cMJfxPnWvBlpu6FOjkLuWkxJfGcGNsOAPax81W2uuKBuZ4HOAneBcUVPRpL/Nf//4tV+VCRMjLuG2Mrdd7wpEpZmCio0wpiNVdGm1M=
+    on_success: change
+    on_failure: always
