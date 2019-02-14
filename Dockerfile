@@ -1,8 +1,11 @@
 # get the base image
-FROM rocker/verse:3.4.4
+FROM rocker/verse:latest
 
 # required
-MAINTAINER Ben Marwick <bmarwick@uw.edu>
+MAINTAINER Antoine Pingault <Antoine.Pingault@ugent.be>
+PACKAGE_VERSION nightly
+PACKAGE_REPO apingaul/ugentthesisdown
+
 
 # get contents of GitHub repo
 COPY . /huskydown
